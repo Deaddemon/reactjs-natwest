@@ -1,0 +1,65 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body {
+  font-family: "Tangerine", serif;
+  background-color: #ffffff;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+#errorCity {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+/* Style for the weather-info container */
+#weather-info {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  transition: transform 0.1s ease-in-out;
+}
+
+/* Hover animation for the weather-info container */
+#weather-info:hover {
+  transform: scale(1.02);
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Style for the temperature element */
+#temperature {
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover animation for the temperature element */
+#temperature:hover {
+  color: darkblue;
+}
+s .text-center {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
