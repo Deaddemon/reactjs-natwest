@@ -39,7 +39,8 @@ const CityChart = () => {
                         <h1>{state.state}</h1>
                     </div>
                      <div className='flex-item-right' style={{ width: '100%', maxWidth: '600px', overflow: 'hidden' }}> {/* Adjust max-width as needed */}
-                        <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+                         <span> Population Distribution</span>
+<div style={{ width: '100%', height: '100%', position: 'relative' }}>
                             <PieChart width={500} height={500} style={{ maxWidth: '100%' }}> {/* Set initial width and height */}
                                 <Pie
                                     data={cityPopulationPercentage}
