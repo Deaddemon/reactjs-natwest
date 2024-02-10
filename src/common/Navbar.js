@@ -26,12 +26,12 @@ const NavBar = () => {
                             justifyContent: "space-around"
                         }}
                     >
-                        <a className="underLine2 hide_on_responsive">
+                        <a className="underLine2  ">
                             <Button variant="text" color="default" href="/">
                                 Assignment-1 
                             </Button>
                         </a>
-                        <a className="underLine2 hide_on_responsive" href="/state">
+                        <a className="underLine2  " href="/state">
                             <Button variant="text" color="default">
                             Assignment-2 
                             </Button>
