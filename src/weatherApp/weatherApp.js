@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import WeatherInfo from "./weatherInfo.js";
+import NavBar from "../common/Navbar.js";
+ 
 
-function weatherApp() {
+function WeatherApp() {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState("");
@@ -14,6 +16,9 @@ function weatherApp() {
       setItems(storedItems);
     }
   };
+  const hideItems = () => {
+    setItems([]);
+  }
 
   // useEffect(() => {
   //   if (weatherData !== null) {
@@ -99,7 +104,9 @@ function weatherApp() {
   };
 
   return (
-    <div className="App">
+    <>
+    <NavBar/>
+    <div className="App"> 
       <div className="container">
         <div className="row">
           <div className="col-md-12">
@@ -111,14 +118,19 @@ function weatherApp() {
                 placeholder="Enter City name "
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
-                onFocus={displayItems}
+               // onMouseEnter={displayItems}
+               onFocus={displayItems}
+                
               />
 
-              <ul>
+              <ul onMouseLeave={hideItems}>
                 {items.slice(-5).map((item, index) => (
-                  <div className="text-dark d-flex justify-content-start">
+                  <div className="text-dark d-flex justify-content-start displayItems" style={{
+                   
+                     width: "auto",
+                  }}  >
                     {
-                      <ul>
+                      <ul >
                         <li key={index} onClick={() => setCity(item)}>
                           {" "}
                           @past search:: {item}
@@ -164,7 +176,8 @@ function weatherApp() {
         )}
       </div>
     </div>
+    </>
   );
 }
 
-export default weatherApp;
+export default WeatherApp;

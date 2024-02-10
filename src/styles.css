@@ -17,49 +17,59 @@ body {
   text-align: center;
 }
 
-/* Style for the weather-info container */
+ 
 #weather-info {
   margin: 20px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #f7f7f7;
-  transition: transform 0.1s ease-in-out;
+  /* transition: transform 0.1s ease-in-out; */
 }
 
-/* Hover animation for the weather-info container */
-#weather-info:hover {
-  transform: scale(1.02);
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-/* Style for the temperature element */
-#temperature {
-  cursor: pointer;
-  text-decoration: underline;
-  color: blue;
-  transition: color 0.3s ease-in-out;
-}
-
-/* Hover animation for the temperature element */
+ 
 #temperature:hover {
   color: darkblue;
 }
-s .text-center {
-  text-align: center;
+ 
+
+/*state wise summary*/
+.treenode{ 
+    flex: '1 0 calc(20% - 20px)';  
+    cursor: pointer;
+}
+ 
+
+.negative {
+  color: red !important; 
 }
 
-ul {
-  list-style-type: none;
+.cityCharts{
+  display: flex;
+  flex-direction: row;
+  text-align : center;
+
+  
 }
 
-li {
-  cursor: pointer;
+.flex-item-left{
+  flex: 50%;
+  padding-top: 10%;
+  
 }
 
-li:hover {
-  transform: scale(1.02);
+.flex-item-right{
+  flex: 50%;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 620px) {
+  .treenode {
+    flex: '1 0 calc(50% - 20px)'; /* Adjust to display 2 rectangles per line */
+  }
+
+  .cityCharts{
+    flex-direction: column; 
+  }
 }
