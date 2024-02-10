@@ -60,9 +60,9 @@ body {
 
 .flex-item-right{
   flex: 50%;
-  
+    border: 1px solid #ccc;
   margin-bottom: 10px;
- 
+   justify-content: start;
 }
 
 @media (max-width: 620px) {
