@@ -21,7 +21,7 @@ const CityChart = () => {
     const cityPopulationPercentage = state.cities.map((city) => ({
         name: city.name,
         population: city.population,
-        percentage: (((city.population / totalPopulation).toFixed(3)) * 100),
+        percentage: (((city.population / totalPopulation).toFixed(2)) * 100),
     }));
 
 
@@ -56,6 +56,14 @@ const CityChart = () => {
                                     ))}
                                 </Pie>
                             </PieChart>
+
+                                      {cityPopulationPercentage.map((entry, index) => (
+                                <span>
+                                    <span style={{ color: COLORS[index % COLORS.length] }}>&#9632;</span>
+                                     <span style={{ marginRight: '10px' }}>{entry.name}: {entry.percentage.toFixed(2)}%</span>
+                                </span>
+                                
+                            ))}
                         </div>
                     </div>
                 </div>
