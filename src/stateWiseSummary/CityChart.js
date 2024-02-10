@@ -38,23 +38,25 @@ const CityChart = () => {
                     <div className='flex-item-left'>
                         <h1>{state.state}</h1>
                     </div>
-                    <div className='flex-item-right'>
-                        <PieChart width={500} height={500}>
-                            <Pie
-                                data={cityPopulationPercentage}
-                                dataKey="percentage"
-                                nameKey="name"
-                                cx="50%"
-                                cy="50%"
-                                outerRadius={80}
-                                fill="#8884d8"
-                                label
-                            >
-                                {cityPopulationPercentage.map((entry, index) => (
-                                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                                ))}
-                            </Pie>
-                        </PieChart>
+                     <div className='flex-item-right' style={{ width: '100%', maxWidth: '600px', overflow: 'hidden' }}> {/* Adjust max-width as needed */}
+                        <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+                            <PieChart width={500} height={500} style={{ maxWidth: '100%' }}> {/* Set initial width and height */}
+                                <Pie
+                                    data={cityPopulationPercentage}
+                                    dataKey="percentage"
+                                    nameKey="name"
+                                    cx="50%"
+                                    cy="50%"
+                                    outerRadius={80}
+                                    fill="#8884d8"
+                                    label
+                                >
+                                    {cityPopulationPercentage.map((entry, index) => (
+                                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                    ))}
+                                </Pie>
+                            </PieChart>
+                        </div>
                     </div>
                 </div>
 
